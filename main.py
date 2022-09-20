@@ -28,9 +28,11 @@ if __name__ == '__main__':
             file.write(new_bytes)
 
         print("The new value is set to " + str(distance))
-        input("Press Enter to close this window...")
+        input("Press Enter to continue...")
     except FileNotFoundError:
         print("Client.dll could not be found. Place this .exe file in "
               "the same directory as client.dll (dota 2 beta\\game\\dota\\bin\\win64)")
+        input("Press Enter to continue...")
     except OSError:
         print("Error while reading data. The client.dll file may have already been modified.")
+        input("Press Enter to continue...")
